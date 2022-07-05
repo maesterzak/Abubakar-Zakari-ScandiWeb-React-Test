@@ -1,0 +1,138 @@
+.h1{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    text-transform: uppercase;
+
+    
+}
+.h3{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+}
+.item{
+    
+    font-style: normal;
+    display: flex;
+    width: 100%;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px #E5E5E5 solid;
+
+    
+}
+
+.column_1{
+    width: 292px;
+    
+}
+.item-brand{
+    
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 20px;
+}
+.item-name{
+    font-size: 24px;
+}
+
+
+.item-price{
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 18px;
+}
+
+.column_2{
+    width: 350px;
+    display: flex;
+    height: fit-content;
+    
+}
+.quantity-control{
+    flex: 1;
+    display: flex;
+    align-content: space-between;
+    margin-right: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.quantity-control button{
+    font-size: x-large;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 1px #1D1F22 solid;
+    font-weight:100 ;
+    font-weight: 100;
+}
+.quantity-control div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.item-image{
+    flex: 6;
+}
+.img-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-toggler{
+    position: absolute;
+    right: 15px;
+    bottom: 7px;
+    display: flex;
+    gap: 10px;
+}
+.img-toggler button{
+    background: #1D1F22;
+    
+}
+
+.size-button{
+    background: #1D1F22;
+    color: white;
+    font-size: large;
+    border: 2px solid #1D1F22;
+    /* min-width: 55px; */
+    padding: 5px;
+    height: 45px;
+    margin-right: 10px;
+}
+.size-button:hover{
+    background: #1D1F22;
+    color: white;
+}
+.color-button{
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+.item-summary{
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+}
+.item-summary span{
+    font-weight: 700;
+}
+
+@media(max-width:760px){
+    .item-brand{
+        font-size: 20px;
+    }
+    .item-name{
+        font-size: 18px;
+    }
+}
+

@@ -1,6 +1,23 @@
-# Getting Started with Create React App
+# React Front End For Scandia Web Test
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Getting Setup
+
+This frontend is designed to work with [junior-react-endpoint](https://github.com/maesterzak/junior-react-endpoint) (forked from scandiaWeb) so it will not load successfully if the backend is not working or not connected.
+
+
+### Installing Dependencies
+
+1. **Installing Node and NPM**
+   This project depends on Nodejs and Node Package Manager (NPM). Before continuing, you must download and install Node (the download includes NPM) from [https://nodejs.com/en/download](https://nodejs.org/en/download/).
+
+2. **Installing project dependencies**
+   This project uses NPM to manage software dependencies. NPM Relies on the package.json file located in the `myapp` directory of this repository. After cloning, open your terminal and run:
+
+```bash
+npm install
+```
 
 ## Available Scripts
 
@@ -68,3 +85,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+

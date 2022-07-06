@@ -115,25 +115,6 @@
 }
 
 
-/* input[type=radio] {
-    border: 1px solid #fff;
-    
-    padding: 10px;
-    -webkit-appearance: none;
-}
-  
-input[type=radio]:checked {
-/* background: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==) no-repeat center center; */
-/* background-size: 9px 9px; */
-    /* border: 1px solid purple;
-    padding: 5px;
-    transform:scale(1.2, 1.2) ;
-
-} */
-
-/* input[type=radio]:focus {
-outline-color: transparent;
-}  */
 
 input[type='radio'] {
     box-sizing: border-box;

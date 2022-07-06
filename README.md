@@ -1,10 +1,10 @@
-# React Front End For Scandia Web Test
+# React Front End For ScandiWeb Test
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Getting Setup
 
-This frontend is designed to work with [junior-react-endpoint](https://github.com/maesterzak/junior-react-endpoint) (forked from scandiaWeb) so it will not load successfully if the backend is not working or not connected.
+This frontend is designed to work with [junior-react-endpoint](https://github.com/maesterzak/junior-react-endpoint) (forked from scandiWeb) so it will not load successfully if the backend is not working or not connected.
 
 
 ### Installing Dependencies

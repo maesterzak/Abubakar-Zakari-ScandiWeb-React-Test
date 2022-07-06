@@ -13,7 +13,7 @@ This frontend is designed to work with [junior-react-endpoint](https://github.co
    This project depends on Nodejs and Node Package Manager (NPM). Before continuing, you must download and install Node (the download includes NPM) from [https://nodejs.com/en/download](https://nodejs.org/en/download/).
 
 2. **Installing project dependencies**
-   This project uses NPM to manage software dependencies. NPM Relies on the package.json file located in the `myapp` directory of this repository. After cloning, open your terminal and run:
+   This project uses NPM to manage software dependencies. NPM Relies on the package.json file located in the `project` directory of this repository. After cloning, open your terminal and run:
 
 ```bash
 npm install

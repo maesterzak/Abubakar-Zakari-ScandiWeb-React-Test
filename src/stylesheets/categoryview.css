@@ -5,12 +5,15 @@
     gap: 1%;
     flex-wrap: wrap;
     
-  }
+}
   
 .item-container {
   width: 30%;
   margin-bottom: 5%;
   padding: 10px;
+  position: relative;
+  
+  
   /* --block:hidden;   */
   
 }
@@ -22,6 +25,7 @@
 .item-container:hover .plp-cart{
   visibility: visible;
 }
+
 
 .item-container .img-box {
   height: 360px;
@@ -35,7 +39,8 @@
 .plp-cart{
   position: absolute;
   right: 5%;
-  bottom: -10%;
+  bottom: 15%;
+  
   z-index: 9999;
   width: 52px;
   height: 52px;
@@ -49,22 +54,49 @@
   visibility: hidden;
   cursor: pointer;
 }
-.item-container .img-box .plp-cart .plp-cart-img{
+.plp-cart-img{
   width: 50%;
   height: auto;
 }
 .plp-cart-popup-ctn{
   position: absolute;
-  bottom: 10%;
+  top: 30%;
   right: 3%;
   width: 260px;
   min-height: 220px;
+  padding: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  
   /* visibility: var(--block); */
 }
+.color-button-plp{
+  width: 10px;
+  height: 10px;
+  /* margin-right: 10px; */
+}
+.plp-attr input[type='radio'] {
+  box-sizing: border-box;
+  appearance: none;
+  
+  border: 0.5px #1D1F22 solid;
+  width: 30px;
+  height: 30px;
+  
+}
+
+.plp-attr input[type='radio']:checked {
+transform:scale(1.1, 1.1) ;
+outline: #5ECE7B 1px solid;
+border: 1px solid whitesmoke;
+outline-offset: 1px;
+}
+.plp-attr input[type="radio" i]:focus {
+  outline-offset: 1px;
+}
+
 .plp-cart-popup{
   
   width: 200px;
@@ -82,6 +114,9 @@
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
+}
+.plp-attr{
+  margin-bottom: 30px;
 }
 .plp-submit-btn{
   background: #5ECE7B;
@@ -127,18 +162,50 @@
 }
 .item_name{
   font-weight: 300;
+  line-height: 28.8px;
   line-height: 160%;
 }
-.item_name:hover{
-  color: #5ECE7B;
-}
+
 .item_price{
-  font-weight: 500;
+  font-weight: 600;
   font-size: 18px;
   line-height: 160%;
 }
 
 
+
+.attr-label-plp{
+    margin-right: 40px;
+    padding: 5px;
+    position: relative;
+    font-family: Source Sans Pro;
+    
+    
+    
+}
+.attr-label-plp input {
+    display: none;
+    
+}
+.attr-label-plp span {
+    position: absolute;
+    top: 0;
+    border: 2px solid #1D1F22;
+    text-align: center;
+    min-width: 30px;
+    text-align: center;
+    height: 30px;
+    line-height: 35px;
+    font-size: 14px;
+    
+    
+}
+.attr-label-plp input:checked + span {
+
+    background: #1D1F22;
+    
+    color: white;
+}
 
 @media (max-width: 760px) {
   .container{

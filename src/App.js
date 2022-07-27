@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CategoryView from './components/CategoryView';
 import PdpView from './components/PdpView';
@@ -17,6 +17,9 @@ class App extends Component{
     if(localStorage.getItem('cart') === null){
       localStorage.setItem('cart', JSON.stringify({"content":[],"CartTotal":0}))
       
+    }
+    if(localStorage.getItem('currentCategory') === null){
+      localStorage.setItem('currentCategory', 'all')
     }
     
     

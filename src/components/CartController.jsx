@@ -7,13 +7,14 @@ const CartController = (
   brand,
   prices,
   attributes,
-  gallery
+  gallery,
+  allAttributes
 ) => {
   //get the current value of cart from localstorage
   const localCart = localStorage.getItem("cart");
   //parse the current value of cart
   const cart = JSON.parse(localCart);
-
+  
   // check if a product with the same attributes and id exist in cart. Return it's index or return -1 if not found
   const index = cart["content"].findIndex(
     (item) => isEqual(item.id, id) && isEqual(item.attributes, attributes)
@@ -44,6 +45,7 @@ const CartController = (
         prices: prices,
         attributes: attributes,
         gallery: gallery,
+        allAttributes:allAttributes,
         quantity: 1,
       });
       cart["CartTotal"] += 1;

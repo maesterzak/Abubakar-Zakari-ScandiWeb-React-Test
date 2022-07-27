@@ -72,16 +72,31 @@
 .mt-0{
     margin-top: 0;
 }
+.pdp-item-brand{
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 27px;
+    line-height: 77%;
+}
+.pdp-item-name{
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 27px;
+    line-height: 77%;
+}
 
-.h3{
+.pdp-atrr-name{
     font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 18px;
+    line-height: 85%;
 }
 .item-description{
-    font-family: 'Roboto';
+    font-family: Roboto;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -102,9 +117,10 @@
     color: white;
 }
 .color-button{
-    width: 32px;
-    height: 32px;
+    /* width: 32px;
+    height: 32px; */
     margin-right: 10px;
+    
     
 }
 .item-price{
@@ -116,19 +132,24 @@
 
 
 
-input[type='radio'] {
+.attr-div input[type='radio'] {
     box-sizing: border-box;
     appearance: none;
     
-    border: 1px #1D1F22 solid;
-    width: 22px;
-    height: 22px;
+    border: 0.5px #1D1F22 solid;
+    width: 36px;
+    height: 36px;
+    
 }
   
-input[type='radio']:checked {
-transform:scale(1.2, 1.2) ;
+.attr-div input[type='radio']:checked {
+transform:scale(1.1, 1.1) ;
 outline: #5ECE7B 1px solid;
-border: 4px solid whitesmoke;
+border: 0.9px solid whitesmoke;
+outline-offset: 1px;
+}
+.attr-div input[type="radio" i]:focus {
+    outline-offset: 1px;
 }
   
 .center-content{
@@ -136,25 +157,30 @@ border: 4px solid whitesmoke;
     justify-content: center;
 }
 .attr-div .attr-label{
-    padding-left: 20px;
+    padding-right: 10px;
 }
 .attr-label{
-    margin: 20px;
+    margin-right: 40px;
     padding: 5px;
     position: relative;
+    font-family: Source Sans Pro;
     
     
 }
 .attr-label input {
     display: none;
+    
 }
 .attr-label span {
     position: absolute;
     top: 0;
     border: 2px solid #1D1F22;
-    padding: 5px;
-    min-width: 20px;
+    /* padding: 5px; */
+    min-width: 40px;
     text-align: center;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
     
     
 }
@@ -164,6 +190,7 @@ border: 4px solid whitesmoke;
     
     color: white;
 }
+
 @media(max-width:760px){
     .column{
         flex-direction: column;

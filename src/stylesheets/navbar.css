@@ -28,7 +28,9 @@ nav .category-links {
     display: inline-flex;
     width: 60%;
     gap: 20px;
-    
+    font-size: 16px;
+    line-height: 19.2px;
+    line-height: 120%;
     padding-inline-start:0px
 }
 .nav-link{
@@ -42,6 +44,7 @@ nav .category-links {
 nav .nav-dropdown-group{
     list-style-type: none;
     display: inline-flex;
+    align-items: baseline;
     gap: 20px;
     
     
@@ -156,14 +159,14 @@ nav ul li{
     position: absolute;
     top: 0;
     
-    right: 30px;
+    right: 70px;
     background: white;
     
 }
 .dropdown-cart{
     margin-top: 0;
     padding: 10px;
-    width: 300px;
+    width: 330px;
     
 }
 .cart-font1{
@@ -278,18 +281,29 @@ nav ul li{
     color: #5ECE7B;
 }
 .cart-size-button{
-    padding: 3px;
-    background: transparent;
+    padding: 4px;
+    
     border: 2px solid #1D1F22;
     margin-bottom: 2px;
     margin-right: 3px;
     font-size: 14px;
+    background: transparent;
+}
+.cart-size-button-active{
+    background: #1D1F22;
+    color: white;
 }
 .cart-color-button{
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     margin-right: 4px;
     
+}
+.cart-color-button-active{
+    transform:scale(1.1, 1.1) ;
+    outline: #5ECE7B 1px solid;
+    border: 1px solid whitesmoke;
+    outline-offset: 1px;
 }
 .cart-attr-name{
     margin-bottom: 10px;
@@ -337,6 +351,7 @@ nav ul li{
         display: grid;
         overflow: hidden;
         gap: 15px;
+        
         
     }
     li .img{

@@ -104,7 +104,7 @@ class CartView extends Component {
                       price.currency.symbol === this.props.currentCurrencySymbol
                   )
                   .map((price, index) => {
-                    const amount = price.amount * item.quantity;
+                    const amount = price.amount;
                     return (
                       <h2 key={index} className="item-price">
                         <b>
@@ -114,24 +114,44 @@ class CartView extends Component {
                     );
                   })}
 
-                {Object.keys(item.attributes).map((ca, index) => {
-                  return (
-                    <div key={index}>
-                      <h2 className="h3">{ca.toLocaleUpperCase()}:</h2>
+                                {item.allAttributes.map((attr, index)=>{
+                                  return(
+                                    <div key={index}>
+                                      <h2 className="h3">
+                                        {attr.name.toLocaleUpperCase()}:
+                                      </h2>
 
-                      {ca === "color" ? (
-                        <button
-                          style={{ background: `${item.attributes[ca]}` }}
-                          className="color-button"
-                        ></button>
-                      ) : (
-                        <button className="size-button">
-                          {item.attributes[ca]}
-                        </button>
-                      )}
-                    </div>
-                  );
-                })}
+                                      {attr.items.map((allAttr, index)=>{
+                                        return(
+                                          <React.Fragment key={index}>
+                                          
+                                          {attr.name.toLocaleLowerCase() ==="color" ? 
+                                          
+                                          <button className={item.attributes.color === allAttr.value ?  "main-cart-color-button main-cart-color-button-active":'main-cart-color-button'}
+                                          style={{background: `${allAttr.value}`}}
+                                          >
+                                            
+
+                                            {attr.name.toLocaleLowerCase() ==="color" ?  '':allAttr.value}
+                                          </button> 
+                                          :
+                                          <button key={index} className={Object.values(item.attributes)[Object.keys(item.attributes).findIndex(key => key === attr.name)] === allAttr.value ?  "main-cart-size-button main-cart-size-button-active":'main-cart-size-button '}
+                                          
+                                          >
+                                            {allAttr.value}
+                                            
+                                            
+                                          </button> 
+                                          
+                                          }
+                                          </React.Fragment>
+                                        )
+                                  })}
+                                </div>
+                              )
+                            })}
+
+                
               </div>
 
               <div className="column_2">

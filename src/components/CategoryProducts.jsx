@@ -57,7 +57,8 @@ class CategoryProducts extends Component {
         product.brand,
         product.prices,
         form_values,
-        product.gallery
+        product.gallery,
+        product.attributes
       );
     
     const { changeCart } = this.props;
@@ -77,7 +78,8 @@ class CategoryProducts extends Component {
       product.brand,
       product.prices,
       attributes,
-      product.gallery
+      product.gallery,
+      product.attributes
     );
   
   const { changeCart } = this.props;
@@ -89,9 +91,11 @@ class CategoryProducts extends Component {
           popupId: id
       })
   }
-
+  
   render() {
+    
     const { loading, products, popupId } = this.state;
+    
     if (loading === false) {
       return (
         <>
@@ -101,20 +105,58 @@ class CategoryProducts extends Component {
               return (
                 <div key={product.id} onMouseLeave={()=>this.setState({popupId:''})} className="item-container">
                     
-                  
+                  <Link to={`/${product.id}`}>
                     {product.inStock ? (
                       
                       <div className="img-box">
                         <img alt={"product gallery"} src={product.gallery[0]} />
+                        
+                        
+                        </div>
+                    ) : (
+                      <div className="img-box">
+                        <img alt={product.name} src={product.gallery[0]} />
+                        <div className="light-overlay">OUT OF STOCK</div>
+                      </div>
+                    )}
+
+                    <div
+                      className={
+                        product.inStock ? "item-info" : "item-info half-opacity"
+                      }
+                    >
+                       
+                      <span className="item_name">{product.brand} {product.name}</span>
+
+                      {product.prices
+                        .filter(
+                          (price) =>
+                            price.currency.symbol ===
+                            this.props.currentCurrencySymbol
+                        )
+                        .map((price) => {
+                          return (
+                            <span
+                              key={price.currency.label}
+                              className="item_price"
+                            >
+                              {price.currency.symbol} {price.amount}
+                            </span>
+                          );
+                        })}
+                    </div>
+                    </Link>
+
+                    {/* begin */}
                         {product.attributes.length > 0 ?
                         <> 
-                        <div className="plp-cart-popup-ctn">
-                            <div className={product.id === popupId ?  "plp-cart-popup":'d-none'}>
+                        <div className={product.id === popupId ? "plp-cart-popup-ctn": "d-none"}>
+                            <div className="plp-cart-popup">
                                 <form id={product.id} onSubmit={this.submitHandler}>
                                     
                                     {product.attributes.map((attribute, index)=>{
                                         return(
-                                            <div key={index}>
+                                            <div key={index} className='plp-attr'>
                                                 <p className="">{attribute.name.toUpperCase()}:</p>
                                                 {attribute.items.map((item, ind)=>{
                                                         
@@ -125,7 +167,7 @@ class CategoryProducts extends Component {
                                                                 style={{ background: item.value }}
                                                                 name="color"
                                                                 type={"radio"}
-                                                                className="color-button"
+                                                                className="color-button-plp"
                                                                 defaultValue={item.value}
                                                                 required
                                                                 defaultChecked={
@@ -135,7 +177,7 @@ class CategoryProducts extends Component {
                                                             );
                                                           } else {
                                                             return (
-                                                              <label key={item.id} className="attr-label">
+                                                              <label key={item.id} className="attr-label-plp">
                                                                 <input
                                                                   style={{ background: item.value }}
                                                                   type={"radio"}
@@ -167,43 +209,10 @@ class CategoryProducts extends Component {
                         </div>
                         
                         
-                        <div onClick={()=>this.popupHandler(product.id)} className="plp-cart"><img alt="cart" className="plp-cart-img" src="/assets/light-cart.svg" /></div>
+                        <div onClick={()=>this.popupHandler(product.id)} className={product.inStock ? "plp-cart":"d-none"}><img alt="cart" className="plp-cart-img" src="/assets/light-cart.svg" /></div>
                         </>
-                        : <button onClick={()=>this.AddProduct(product.id)} className="plp-cart"><img alt="cart" className="plp-cart-img" src="/assets/light-cart.svg" /></button>}
-                        
-                        </div>
-                    ) : (
-                      <div className="img-box">
-                        <img alt={product.name} src={product.gallery[0]} />
-                        <div className="light-overlay">OUT OF STOCK</div>
-                      </div>
-                    )}
-
-                    <div
-                      className={
-                        product.inStock ? "item-info" : "item-info half-opacity"
-                      }
-                    >
-                      <Link to={`/${product.id}`}>  
-                      <span className="item_name">{product.brand} {product.name}</span></Link>
-
-                      {product.prices
-                        .filter(
-                          (price) =>
-                            price.currency.symbol ===
-                            this.props.currentCurrencySymbol
-                        )
-                        .map((price) => {
-                          return (
-                            <span
-                              key={price.currency.label}
-                              className="item_price"
-                            >
-                              {price.currency.symbol} {price.amount}
-                            </span>
-                          );
-                        })}
-                    </div>
+                        : <button onClick={()=>this.AddProduct(product.id)} className={product.inStock ? "plp-cart":"d-none"}><img alt="cart" className="plp-cart-img" src="/assets/light-cart.svg" /></button>}
+                    {/* end */}
                   
                 </div>
               );

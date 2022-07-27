@@ -59,7 +59,7 @@ class Navbar extends Component {
     const { cart } = this.props;
     const { navState } = this.state;
     
-    
+   
 
     return (
       <div className="nav-container ">
@@ -75,7 +75,7 @@ class Navbar extends Component {
               <ul className="nav-dropdown-group">
                 <AllCurrencies />
                 <li onClick={this.CartDropDown}>
-                  <img alt="cart" className="img" src="/assets/cart.svg" />
+                  <img alt="cart" className="img " src="/assets/cart.svg" />
                   <sup>
                     <div className="cart-size">{cart["CartTotal"]}</div>
                   </sup>
@@ -123,7 +123,7 @@ class Navbar extends Component {
                                 this.props.currentCurrencySymbol
                             )
                             .map((price, index) => {
-                              const amount = price.amount * item.quantity;
+                              const amount = price.amount 
                               return (
                                 <p key={index} className="mini-cart-price">
                                   <b>
@@ -132,27 +132,43 @@ class Navbar extends Component {
                                 </p>
                               );
                             })}
-                          {Object.keys(item.attributes).map((ca, index) => {
-                            return (
-                              <div key={index}>
-                                <div className="cart-attr-name">
-                                  {ca.toLocaleLowerCase()}:
+                            {item.allAttributes.map((attr, index)=>{
+                              return(
+                                <div key={index}>
+                                  <div className="cart-attr-name">
+                                    {attr.name.toLocaleLowerCase()}:
+                                  </div>
+
+                                  {attr.items.map((allAttr, index)=>{
+                                    return(
+                                      <React.Fragment key={index}>
+                                       
+                                      {attr.name.toLocaleLowerCase() ==="color" ? 
+                                      
+                                      <button className={item.attributes.color === allAttr.value ?  "cart-color-button cart-color-button-active":'cart-color-button'}
+                                       style={{background: `${allAttr.value}`}}
+                                       >
+                                         
+
+                                         {attr.name.toLocaleLowerCase() ==="color" ?  '':allAttr.value}
+                                       </button> 
+                                      :
+                                      <button key={index} className={Object.values(item.attributes)[Object.keys(item.attributes).findIndex(key => key === attr.name)] === allAttr.value ?  "cart-size-button cart-size-button-active":'cart-size-button '}
+                                       
+                                       >
+                                         {allAttr.value}
+                                         
+                                         
+                                       </button> 
+                                       
+                                      }
+                                      </React.Fragment>
+                                    )
+                                  })}
                                 </div>
-                                {ca === "color" ? (
-                                  <button
-                                    style={{
-                                      background: `${item.attributes[ca]}`,
-                                    }}
-                                    className="cart-color-button"
-                                  ></button>
-                                ) : (
-                                  <button className="cart-size-button">
-                                    {item.attributes[ca]}
-                                  </button>
-                                )}
-                              </div>
-                            );
-                          })}
+                              )
+                            })}
+                         
                         </div>
                         <div className="cart-info2">
                           <div className="quantity-toggler">

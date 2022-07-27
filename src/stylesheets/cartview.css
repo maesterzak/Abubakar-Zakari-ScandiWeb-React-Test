@@ -127,6 +127,37 @@
     font-weight: 700;
 }
 
+
+.main-cart-size-button{
+    padding: 4px;
+    
+    border: 2px solid #1D1F22;
+    margin-bottom: 2px;
+    margin-right: 8px;
+    font-size: 14px;
+    background: transparent;
+    min-width: 55px;
+    height: 45px;
+    font-size: 16px;
+}
+.main-cart-size-button-active{
+    background: #1D1F22;
+    color: white;
+}
+.main-cart-color-button{
+    min-width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    
+}
+.main-cart-color-button-active{
+    transform:scale(1.1, 1.1) ;
+    outline: #5ECE7B 1px solid;
+    border: 2px solid whitesmoke;
+    outline-offset: 1px;
+}
+
 @media(max-width:760px){
     .item-brand{
         font-size: 20px;

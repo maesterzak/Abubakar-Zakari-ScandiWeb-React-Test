@@ -58,6 +58,7 @@ class PdpView extends Component {
       product.prices,
       form_values,
       product.gallery,
+      product.attributes
       
     );
 
@@ -101,15 +102,15 @@ class PdpView extends Component {
             </div>
 
             <form onSubmit={this.submitHandler} className="column3">
-              <h1 className="h2 mt-0">{product.brand}</h1>
+              <h1 className=" mt-0 pdp-item-brand">{product.brand}</h1>
 
-              <h2 className="item-name"> {product.name}</h2>
+              <h2 className="pdp-item-name"> {product.name}</h2>
 
               <div>
                 {product.attributes.map((attribute) => {
                   return (
                     <div className="attr-div" key={attribute.id}>
-                      <h2 className="h3">{attribute.name.toUpperCase()}:</h2>
+                      <h2 className="pdp-atrr-name">{attribute.name.toUpperCase()}:</h2>
                       {attribute.items.map((item) => {
                         if (attribute.name === "Color") {
                           return (
@@ -151,7 +152,7 @@ class PdpView extends Component {
                 })}
               </div>
 
-              <h2 className="h3">PRICE:</h2>
+              <h2 className="pdp-atrr-name">PRICE:</h2>
 
               {product.prices
                 .filter(
@@ -166,7 +167,7 @@ class PdpView extends Component {
                   );
                 })}
 
-              <div className="center-content">
+              <div>
                 {product.inStock ? (
                   <UiButton type={"submit"} cart>
                     ADD TO CART
@@ -177,7 +178,7 @@ class PdpView extends Component {
                   </UiButton>
                 )}
               </div>
-              <div>
+              <div className="item-description">
                 {parse(product.description)}
               </div>
             </form>

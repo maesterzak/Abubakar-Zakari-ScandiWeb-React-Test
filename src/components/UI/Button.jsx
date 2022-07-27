@@ -8,13 +8,13 @@ export const UiButton = styled.button`
     props.cart && css
     `
     display: flex;
-    flex-direction: column;
+    justify-content:center;
     align-items: center;
     padding: 16px 32px;
     border-color: transparent;
     margin-top: 10px;
-    width: 292px;
-    height: 52px;
+    width: 279px;
+    height: 43px;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;

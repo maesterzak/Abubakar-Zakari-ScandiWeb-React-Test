@@ -6,6 +6,7 @@ import { client } from "../index";
 import { Link } from "react-router-dom";
 import CartController from "./CartController";
 
+
 class CategoryProducts extends Component {
   constructor(props) {
     super(props);
@@ -26,11 +27,13 @@ class CategoryProducts extends Component {
     }
   }
 
-  async getInitialData() {
+  getInitialData() {
     const watch = client.watchQuery({
       query: getCategoryProducts(this.props.currentCategory),
     });
-    this.subobj = watch.subscribe(({ loading, data }) => {
+    this.subobj = watch.subscribe(({ loading,error, data }) => {
+      if (loading) return <p>Loading</p>;
+      else if (error) return console.log('error');
       this.setState({
         products: data.category.products,
         loading: loading,
@@ -99,7 +102,7 @@ class CategoryProducts extends Component {
     if (loading === false) {
       return (
         <>
-          <h1>{this.props.currentCategory.toUpperCase()}</h1>
+          <h1 className="main-category-name">{this.props.currentCategory.toUpperCase()}</h1>
           <div className="items">
             {products.map((product) => {
               return (

@@ -22,6 +22,7 @@ export const UiButton = styled.button`
     color: #FFFFFF;
     background: #5ECE7B;
     cursor:pointer;
+    font-family:'Raleway';
     `
     }
     

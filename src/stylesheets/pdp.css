@@ -73,18 +73,20 @@
     margin-top: 0;
 }
 .pdp-item-brand{
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-weight: 600;
     font-size: 30px;
     line-height: 27px;
     line-height: 77%;
+    color: #1D1F22;
 }
 .pdp-item-name{
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-weight: 400;
     font-size: 30px;
     line-height: 27px;
     line-height: 77%;
+    color: #1D1F22;
 }
 
 .pdp-atrr-name{
@@ -96,10 +98,10 @@
     line-height: 85%;
 }
 .item-description{
-    font-family: Roboto;
-    font-style: normal;
+    font-family: 'Roboto';
     font-weight: 400;
     font-size: 16px;
+    line-height: 25.59px;
     line-height: 159.96%;
 
 
@@ -120,11 +122,12 @@
     /* width: 32px;
     height: 32px; */
     margin-right: 10px;
+    cursor: pointer;
     
     
 }
-.item-price{
-    font-style: normal;
+.pdp-item-price{
+    font-family: 'Raleway';
     font-weight: 700;
     font-size: 24px;
     line-height: 18px;
@@ -163,7 +166,8 @@ outline-offset: 1px;
     margin-right: 40px;
     padding: 5px;
     position: relative;
-    font-family: Source Sans Pro;
+    font-family: 'Source Sans Pro';
+    cursor: pointer;
     
     
 }

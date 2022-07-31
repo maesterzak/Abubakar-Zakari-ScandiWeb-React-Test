@@ -54,16 +54,16 @@ class CartSummary extends Component {
         <p>
           Quantity: <span>{cart["CartTotal"]}</span>
         </p>
-        <b>Total</b>:{" "}
+        <p className='main-cart-total'>Total:{" "}
         <span>
           {currentCurrencySymbol} {cartTotal.toFixed(2)}
-        </span>
+        </span> </p>
         <UiButton onClick={()=>this.CartCheckOut()} cart>ORDER</UiButton>
       </div>
         :
         <>
-          <span>Total</span>
-          <span>
+          <span className='mini-cart-total'>Total</span>
+          <span className='mini-cart-total-amount'>
             {currentCurrencySymbol} {total.toFixed(2)}
           </span>
         </>

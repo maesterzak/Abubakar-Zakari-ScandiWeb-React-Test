@@ -7,7 +7,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/rootReducer';
-import './fonts/Raleway-VariableFont_wght.ttf';
+
 
 export const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql',

@@ -1,3 +1,11 @@
+.new-line{
+    height: 1px;
+    background: #E5E5E5;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
 .h1{
     font-family: 'Raleway';
     font-style: normal;
@@ -10,12 +18,12 @@
 }
 .h3{
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 18px;
+    font-family: 'Roboto Condensed';
 }
 .item{
     
-    font-style: normal;
     display: flex;
     width: 100%;
     padding-bottom: 20px;
@@ -33,18 +41,26 @@
 .item-brand{
     
     font-weight: 600;
-    font-size: 24px;
-    line-height: 20px;
+    font-size: 30px;
+    line-height: 27px;
+    line-height: 77%;
+    font-family: 'Raleway';
 }
 .item-name{
-    font-size: 24px;
+    font-size: 30px;
+    font-family: 'Raleway';
+    line-height: 27px;
+    line-height: 77%;
+
 }
 
 
 .item-price{
     font-weight: 700;
-    font-size: 19px;
-    line-height: 18px;
+    font-size: 24px;
+    line-height: 24px;
+    line-height: 85%;
+    font-family: 'Raleway';
 }
 
 .column_2{
@@ -65,17 +81,20 @@
 .quantity-control button{
     font-size: x-large;
     margin-top: 10px;
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     background: transparent;
     border: 1px #1D1F22 solid;
     font-weight:100 ;
     font-weight: 100;
+    cursor: pointer;
 }
 .quantity-control div{
     width: 100%;
     display: flex;
     justify-content: center;
+    font-size: 24px;
+    font-family: 'Raleway';
     
 }
 
@@ -96,6 +115,11 @@
 }
 .img-toggler button{
     background: #1D1F22;
+    display: flex;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
     
 }
 
@@ -123,30 +147,38 @@
     line-height: 28px;
     font-weight: 400;
 }
-.item-summary span{
+.item-summary p span{
     font-weight: 700;
+}
+.item-summary .main-cart-total{
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
 }
 
 
 .main-cart-size-button{
-    padding: 4px;
+    padding: 1px;
     
     border: 2px solid #1D1F22;
     margin-bottom: 2px;
     margin-right: 8px;
     font-size: 14px;
     background: transparent;
-    min-width: 55px;
+    width: 55px;
     height: 45px;
     font-size: 16px;
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
 }
 .main-cart-size-button-active{
     background: #1D1F22;
     color: white;
 }
 .main-cart-color-button{
-    min-width: 32px;
-    height: 32px;
+    min-width: 36px;
+    height: 36px;
     margin-right: 8px;
     margin-bottom: 4px;
     

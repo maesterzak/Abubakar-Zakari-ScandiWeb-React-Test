@@ -9,7 +9,6 @@ const getProduct = (id) => gql`
     description
     gallery
     attributes{
-      id
       name
       items{
         id

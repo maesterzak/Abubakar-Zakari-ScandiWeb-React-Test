@@ -1,4 +1,3 @@
-
 const CheckOut =() =>{
     
     localStorage.setItem('cart', JSON.stringify({"content":[],"CartTotal":0}))

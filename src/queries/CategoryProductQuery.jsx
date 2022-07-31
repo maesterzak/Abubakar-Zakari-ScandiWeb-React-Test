@@ -5,7 +5,7 @@ const getCategoryProducts = (category) => gql`
 {
     category(input: {title:"${category}"}){
         name        
-         products{
+        products{
         id     
         name
         brand
@@ -19,20 +19,14 @@ const getCategoryProducts = (category) => gql`
         gallery
         inStock
         attributes{
-          id
           name
           items{
             id
             value
             displayValue
-          }
-          
+          } 
         }
-          
-        
-        
       }
-      
     }
   }
 `

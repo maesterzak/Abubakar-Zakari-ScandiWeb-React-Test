@@ -107,9 +107,9 @@ class PdpView extends Component {
               <h2 className="pdp-item-name"> {product.name}</h2>
 
               <div>
-                {product.attributes.map((attribute) => {
+                {product.attributes.map((attribute, index) => {
                   return (
-                    <div className="attr-div" key={attribute.id}>
+                    <div className="attr-div" key={index}>
                       <h2 className="pdp-atrr-name">{attribute.name.toUpperCase()}:</h2>
                       {attribute.items.map((item) => {
                         if (attribute.name === "Color") {
@@ -161,7 +161,7 @@ class PdpView extends Component {
                 )
                 .map((price, index) => {
                   return (
-                    <p key={index} className="item-price">
+                    <p key={index} className="pdp-item-price">
                       {price.currency.symbol} {price.amount}
                     </p>
                   );

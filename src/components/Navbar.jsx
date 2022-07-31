@@ -36,7 +36,7 @@ class Navbar extends Component {
       product.attributes
     );
     const { changeCart } = this.props;
-
+      
     changeCart(success);
   };
 
@@ -106,7 +106,7 @@ class Navbar extends Component {
             <div className="dropdown-box">
               <div className="dropdown-cart">
                 <p className="cart-font1">
-                  <b>My bag</b>: {cart["CartTotal"]} items
+                  My bag: <span>{cart["CartTotal"]} items</span>
                 </p>
                 <div className="cart-container">
                   {cart["content"].map((item, index) => {
@@ -126,9 +126,9 @@ class Navbar extends Component {
                               const amount = price.amount 
                               return (
                                 <p key={index} className="mini-cart-price">
-                                  <b>
+                                  
                                     {price.currency.symbol} {amount.toFixed(2)}
-                                  </b>
+                                  
                                 </p>
                               );
                             })}
@@ -136,7 +136,7 @@ class Navbar extends Component {
                               return(
                                 <div key={index}>
                                   <div className="cart-attr-name">
-                                    {attr.name.toLocaleLowerCase()}:
+                                    {attr.name}:
                                   </div>
 
                                   {attr.items.map((allAttr, index)=>{

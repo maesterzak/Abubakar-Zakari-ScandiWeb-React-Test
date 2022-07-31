@@ -25,6 +25,7 @@ nav{
 
 nav .category-links {
     list-style-type: none;
+    font-weight: 400;
     display: inline-flex;
     width: 60%;
     gap: 20px;
@@ -72,10 +73,13 @@ nav ul li{
     gap: 10px;
     background: unset;
     border: unset;
-    font-size: 20px;
+    font-size: 18px;
     align-items: baseline;
     cursor: pointer;
-}
+    font-family: 'Raleway';
+    font-weight: 500;
+    
+    }
 .dropDownbtn:focus{
     outline: none;
     border: none;
@@ -102,14 +106,16 @@ nav ul li{
 
 }
 .dropdown-item{
-    color: #1D1F22;
+    color: rgba(29, 31, 34, 1);
     cursor: pointer;
     width: 114px;
     height: 45px;
+    font-family: 'Raleway';
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
     text-align: center;
+    
      
     
 }
@@ -171,7 +177,13 @@ nav ul li{
 }
 .cart-font1{
     font-size: 16px;
+    font-weight: 700;
+    font-family: 'Raleway';
+    line-height: 25.6px;
     line-height: 160%;
+}
+.cart-font1 span{
+    font-weight: 500;
 }
 .cart-font2{
     font-weight: 400;
@@ -205,6 +217,10 @@ nav ul li{
 .cart-info{
     flex: 1;
     font-size: 16px;
+    font-weight: 300;
+    font-family: 'Raleway';
+    line-height: 25.6px;
+    line-height: 160%;
     
 }
 
@@ -227,10 +243,25 @@ nav ul li{
 .quantity-toggler button{
     background: unset;
     border: 1px #1D1F22 solid;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    
+}
+.quantity-toggler span{
+    font-family: 'Raleway';
+    font-size: 16px;
+    line-height: 25.6px;
+    font-weight: 500;
 }
 .mini-cart-price{
+    font-family: 'Raleway';
     font-size: 16px;
+    line-height: 26px;
+    line-height: 160%;
+    font-weight: 500;
 }
+
 .cart-image{
     flex: 4;
     min-height: 120px;
@@ -244,11 +275,18 @@ nav ul li{
     
 }
 .cart-total span{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
     font-size: 16px;
+    
+}
+.cart-total .mini-cart-total{
+    font-weight: 500;
     line-height: 18px;
+    font-family: 'Roboto';
+}
+.cart-total .mini-cart-total-amount{
+    font-weight: 700;
+    line-height: 25.6px;
+    font-family: 'Raleway';
 }
 
 .cart-btns{
@@ -260,8 +298,13 @@ nav ul li{
 .bag-btn{
     background-color: unset;
     border: 1px solid #1D1F22;
-    width: 120px;
-    height: 40px;
+    width: 140px;
+    height: 43px;
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.8px;
+    cursor: pointer;
 
 }
 .bag-btn:hover{
@@ -272,7 +315,13 @@ nav ul li{
     border: unset;
     background: #5ECE7B;
     color: white;
-    width: 120px;
+    width: 140px;
+    height: 43px;
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.8px;
+    cursor: pointer;
 
 }
 .checkout-btn:hover{
@@ -281,13 +330,16 @@ nav ul li{
     color: #5ECE7B;
 }
 .cart-size-button{
-    padding: 4px;
+    text-align: center;
     
     border: 2px solid #1D1F22;
     margin-bottom: 2px;
     margin-right: 3px;
     font-size: 14px;
     background: transparent;
+    font-family: 'Source Sans Pro';
+    min-width: 24px;
+    height: 24px;
 }
 .cart-size-button-active{
     background: #1D1F22;
@@ -306,13 +358,18 @@ nav ul li{
     outline-offset: 1px;
 }
 .cart-attr-name{
+    margin-top: 4px;
     margin-bottom: 10px;
+    font-family: 'Raleway';
+    font-size: 14px;
+    line-height: 97.35%;
     
 }
 .active{
     color: #5ECE7B;
     text-underline-position: below;
     text-decoration: underline;
+    font-weight: 600;
     text-underline-offset: 30px;
     
 }

@@ -89,7 +89,8 @@ class CartView extends Component {
     return (
       <div className="container">
         <h1 className="h1">Cart</h1>
-        <hr />
+        <div className="new-line"></div>  
+        
 
         {cart["content"].map((item, index) => {
           return (
@@ -107,9 +108,9 @@ class CartView extends Component {
                     const amount = price.amount;
                     return (
                       <h2 key={index} className="item-price">
-                        <b>
+                        
                           {price.currency.symbol} {amount.toFixed(2)}
-                        </b>
+                        
                       </h2>
                     );
                   })}
@@ -156,11 +157,11 @@ class CartView extends Component {
 
               <div className="column_2">
                 <div className="quantity-control">
-                  <button onClick={() => this.cartHandler("add", item)}>
+                  <button className="qauntity-ctrl-btn" onClick={() => this.cartHandler("add", item)}>
                     +
                   </button>
                   <div>{item.quantity}</div>
-                  <button onClick={() => this.cartHandler("remove", item)}>
+                  <button className="qauntity-ctrl-btn" onClick={() => this.cartHandler("remove", item)}>
                     -
                   </button>
                 </div>

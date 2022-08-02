@@ -7,9 +7,10 @@ import Navbar from './components/Navbar';
 import CartView from './components/CartView';
 import { Component } from 'react';
 import PageNotFound from './components/PageNotFound';
+import Cookies from 'universal-cookie';
+ 
 
-
-
+const cookies = new Cookies();
 class App extends Component{
  
   componentDidMount(){
@@ -18,10 +19,9 @@ class App extends Component{
       localStorage.setItem('cart', JSON.stringify({"content":[],"CartTotal":0}))
       
     }
-    if(localStorage.getItem('currentCategory') === null){
-      localStorage.setItem('currentCategory', 'all')
+    if(cookies.get('currentCategory') === undefined){
+      cookies.set('currentCategory', 'all', {maxAge:360})
     }
-    
     
   }
   

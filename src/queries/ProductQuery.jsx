@@ -1,5 +1,6 @@
 import { gql } from "@apollo/client";
 
+// getting particular product from graphql endpoint
 const getProduct = (id) => gql`
 {
   product(id:"${id}"){
